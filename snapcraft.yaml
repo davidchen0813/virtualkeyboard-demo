@@ -1,0 +1,53 @@
+name: virtualkeyboard-demo
+version: 0.1
+summary: Virtual Keyboard Demo
+description: |
+    Repackaging of Qt 5.7 basic virtualkeyboard example
+confinement: strict
+
+apps:
+    basic:
+        command: basic
+        plugs: ['home', 'unity7', 'x11', 'opengl']
+
+parts:
+    qml:
+        plugin: qt57
+
+    move:
+        plugin: copy
+        files:
+            basic: basic
+            lib: lib
+            qml: qml
+            plugins: plugins
+#            libsystemd.so.0: lib/x86_64-linux-gnu/libsystemd.so.0
+
+    dep:
+        plugin: nil
+        stage-packages:
+            - libc-bin
+            - libxkbcommon0
+            - ttf-ubuntu-font-family
+            - dmz-cursor-theme
+            - light-themes
+            - shared-mime-info
+            - libgdk-pixbuf2.0-0
+            - libx11-xcb1
+            - libgl1-mesa-dev
+            - libegl1-mesa
+            - libxrender-dev
+            - libgpg-error0
+            - libgcrypt20
+            - liblzma5
+            - libselinux1
+            - libpcre3
+            - zlib1g
+            - libexpat1
+            - libc6
+            - libgcc1
+            - libgcc-5-dev
+            - libstdc++6
+            - libxi6
+            - libuuid1
+
