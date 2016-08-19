@@ -11,8 +11,8 @@
 <br />├── basic             <-- Binary
 <br />├── lib               <-- lib directory
 <br />├── parts 
-<br />│   └── plugins
-<br />│       └── x-qt57.py <-- custom plugin qt57
+<br />│-----└── plugins
+<br />│------------└── x-qt57.py <-- custom plugin qt57
 <br />├── plugins           <-- Qt5.7 plugins directory
 <br />├── qml               <-- Qt5.7 QML modules directory
 <br />└── snapcraft.yaml    
